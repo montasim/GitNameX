@@ -24,6 +24,8 @@ export function Logo({ className, iconSize = "w-10 h-10", textSize = "text-2xl",
     );
 }
 
+import { ModeToggle } from "@/components/mode-toggle";
+
 export function Header() {
     return (
         <header className="fixed top-0 w-full z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
@@ -32,12 +34,13 @@ export function Header() {
                     <Logo />
                 </Link>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                    <ModeToggle />
                     <a
                         href="https://github.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 hover:bg-muted rounded-full transition-colors"
+                        className="p-2 hover:bg-muted rounded-full transition-colors flex items-center justify-center w-10 h-10"
                     >
                         <Github className="w-5 h-5" />
                     </a>
