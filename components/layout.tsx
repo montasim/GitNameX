@@ -4,20 +4,20 @@ import { Github } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 
-export function Logo({ className, iconSize = "w-8 h-8", textSize = "text-xl", showText = true }: {
+export function Logo({ className, iconSize = "w-10 h-10", textSize = "text-2xl", showText = true }: {
     className?: string;
     iconSize?: string;
     textSize?: string;
     showText?: boolean;
 }) {
     return (
-        <div className={cn("flex items-center gap-0.5", className)}>
-            <div className={cn("bg-primary rounded-lg flex items-center justify-center shrink-0", iconSize)}>
-                <span className="text-primary-foreground font-bold leading-none" style={{ fontSize: '1.25rem' }}>C</span>
+        <div className={cn("flex items-center gap-2", className)}>
+            <div className={cn("bg-primary rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-primary/20", iconSize)}>
+                <span className="text-primary-foreground font-black leading-none" style={{ fontSize: '1.5rem' }}>C</span>
             </div>
             {showText && (
-                <span className={cn("font-bold tracking-tight leading-none", textSize)}>
-                    onvert Case
+                <span className={cn("font-black tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70", textSize)}>
+                    Convert Case
                 </span>
             )}
         </div>
@@ -76,10 +76,11 @@ export function Footer() {
 
 export function PageLayout({ children }: { children: React.ReactNode }) {
     return (
-        <main className="min-h-screen relative overflow-hidden bg-background selection:bg-primary selection:text-primary-foreground">
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000" />
+        <main className="min-h-screen relative overflow-hidden bg-background/50 selection:bg-primary/20 selection:text-primary">
+            {/* Soft, colorful ambient background */}
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] animate-blob" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-chart-2/5 rounded-full blur-[120px] animate-blob animation-delay-2000" />
+            <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-chart-3/5 rounded-full blur-[120px] animate-blob animation-delay-4000" />
 
             <Header />
             <div className="container mx-auto px-4 pt-36 pb-20 relative z-10">

@@ -121,29 +121,29 @@ export function CaseConverter() {
     };
 
     return (
-        <div className="w-full max-w-5xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="w-full max-w-5xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-6 duration-1000">
             <PageHeader
                 title="Smart Case Converter"
-                description="The most advanced online case conversion tool. Transform your text instantly with premium accuracy and a clean interface."
+                description="Modern text transformation tools for everyone. Fast, secure, and intuitive."
                 icon={Type}
                 gradient
             />
 
-            <Card className="border-none shadow-2xl bg-card/50 backdrop-blur-sm overflow-hidden ring-1 ring-border/50 py-0 group/card">
+            <Card className="border-none shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-primary/5 bg-card/70 backdrop-blur-xl overflow-hidden ring-1 ring-border py-0 group/card">
                 <CardContent className="p-0">
                     <div className="relative">
                         <Textarea
                             ref={textareaRef}
-                            placeholder="Paste or type your text here..."
-                            className="min-h-[200px] md:min-h-[350px] p-6 md:p-8 text-lg border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent resize-y transition-all duration-300 placeholder:text-muted-foreground/40 leading-relaxed"
+                            placeholder="Type or paste your content here..."
+                            className="min-h-[200px] md:min-h-[300px] p-8 md:p-12 text-xl border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent resize-y transition-all duration-300 placeholder:text-muted-foreground/30 leading-relaxed font-medium"
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                         />
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-4 md:px-8 md:py-6 bg-muted/40 border-t border-border/50 backdrop-blur-md">
-                        <div className="flex flex-wrap justify-center sm:justify-start gap-4">
-                            <StatBadge icon={Hash} label="Chars" value={stats.characters} />
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 md:px-12 md:py-8 bg-muted/30 border-t border-border/50 backdrop-blur-md">
+                        <div className="flex flex-wrap justify-center sm:justify-start gap-3">
+                            <StatBadge icon={Hash} label="Characters" value={stats.characters} />
                             <StatBadge icon={FileText} label="Words" value={stats.words} />
                             <StatBadge icon={AlignLeft} label="Lines" value={stats.lines} />
                         </div>
@@ -151,36 +151,37 @@ export function CaseConverter() {
                         <div className="flex items-center gap-3">
                             <IconButton
                                 icon={Copy}
-                                tooltip="Copy to Clipboard"
+                                tooltip="Copy"
                                 onClick={handleCopy}
                                 success={copied}
                                 disabled={!text}
-                                className={cn(copied && "bg-green-500/10 border-green-500/50 text-green-600 hover:bg-green-500/20")}
+                                className={cn("w-14 h-14 bg-background border-border shadow-sm hover:border-primary/50", copied && "bg-green-500/10 border-green-500/50 text-green-600 hover:bg-green-500/20")}
                             />
                             <IconButton
                                 icon={Download}
-                                tooltip="Download as TXT"
+                                tooltip="Save as TXT"
                                 onClick={handleDownload}
                                 disabled={!text}
+                                className="w-14 h-14 bg-background border-border shadow-sm hover:border-primary/50"
                             />
                             <IconButton
                                 icon={Trash2}
-                                tooltip="Clear All"
+                                tooltip="Clear content"
                                 onClick={onClear}
                                 disabled={!text}
-                                className="hover:bg-destructive/10 hover:text-destructive hover:border-destructive/30"
+                                className="w-14 h-14 bg-background border-border shadow-sm hover:bg-destructive/10 hover:text-destructive hover:border-destructive/30"
                             />
                         </div>
                     </div>
                 </CardContent>
             </Card>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
                 {CONVERSION_OPTIONS.map(({ label, fn }) => (
                     <Button
                         key={label}
                         variant="secondary"
-                        className="rounded-xl h-12 text-sm font-semibold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] bg-secondary/80 hover:bg-primary hover:text-primary-foreground shadow-sm hover:shadow-primary/20 border border-transparent hover:border-primary/20"
+                        className="rounded-2xl h-14 text-sm font-bold transition-all duration-300 hover:scale-[1.05] active:scale-[0.95] bg-secondary/80 hover:bg-primary hover:text-primary-foreground shadow-sm hover:shadow-primary/30 border border-transparent hover:border-primary/30"
                         onClick={() => applyConversion(fn)}
                         disabled={!text}
                     >
@@ -189,21 +190,21 @@ export function CaseConverter() {
                 ))}
             </div>
 
-            <div className="pt-12">
+            <div className="pt-16 pb-12">
                 <InfoGrid>
                     <InfoCard
                         title="Fast & Simple"
-                        description="Just paste your text and click a button. Our algorithm handles the rest instantly, saving you time and effort."
+                        description="Paste your text and transform it instantly. No waiting, no complex menus."
                         icon={Zap}
                     />
                     <InfoCard
-                        title="Clean Interface"
-                        description="A minimalist, distraction-free environment designed for maximum productivity and ease of use."
+                        title="Modern Interface"
+                        description="A clean, colorful, and distraction-free environment designed for your focus."
                         icon={Layout}
                     />
                     <InfoCard
                         title="Secure & Private"
-                        description="Your text never leaves your browser. All conversions are performed locally, ensuring your data remains private."
+                        description="Your data never leaves your device. All processing happens locally in your browser."
                         icon={Shield}
                     />
                 </InfoGrid>
