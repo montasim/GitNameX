@@ -68,13 +68,18 @@ export default function ContactPage() {
                             <div className="pt-8 border-t border-border/50 mt-auto">
                                 <h4 className="font-semibold mb-4 text-sm text-primary uppercase tracking-wider">Social Channels</h4>
                                 <div className="flex flex-wrap gap-4">
-                                    {["Twitter", "LinkedIn", "GitHub"].map((link) => (
+                                    {[
+                                        { label: "LinkedIn", href: "https://www.linkedin.com/in/montasim" },
+                                        { label: "GitHub", href: "https://github.com/montasim" }
+                                    ].map((social) => (
                                         <a
-                                            key={link}
-                                            href="#"
+                                            key={social.label}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="px-4 py-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all text-sm font-medium"
                                         >
-                                            {link}
+                                            {social.label}
                                         </a>
                                     ))}
                                 </div>
