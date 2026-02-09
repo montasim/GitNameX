@@ -147,7 +147,7 @@ export function CaseConverter() {
                         <Textarea
                             ref={textareaRef}
                             placeholder="Type or paste your content here..."
-                            className="min-h-[250px] md:min-h-[450px] p-8 md:p-12 text-xl border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent resize-y transition-all duration-300 placeholder:text-muted-foreground leading-relaxed font-medium"
+                            className="min-h-[250px] md:min-h-[300px] p-8 md:p-12 text-xl border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent resize-y transition-all duration-300 placeholder:text-muted-foreground leading-relaxed font-medium"
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                         />
