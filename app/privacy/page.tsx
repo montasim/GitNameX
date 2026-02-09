@@ -44,7 +44,7 @@ export default function PrivacyPage() {
                         </p>
                     </PageSection>
 
-                    <PageSection title="Contact Privacy" icon={FileText}>
+                    <PageSection title="3. Contact Privacy">
                         <p>
                             If you choose to contact us via email, your email address will only be used to respond to your inquiry and will never be shared with third parties.
                         </p>

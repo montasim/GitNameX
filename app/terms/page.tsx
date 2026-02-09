@@ -1,7 +1,7 @@
 "use client";
 
 import { PageLayout, PageHeader, InfoCard, PageSection, InfoGrid, ContentCard } from "@/components/layout";
-import { Scale, CheckCircle2, AlertCircle } from "lucide-react";
+import { Scale, CheckCircle2, AlertCircle, FileText } from "lucide-react";
 
 export default function TermsPage() {
     return (
@@ -12,54 +12,41 @@ export default function TermsPage() {
                     description="Simple and transparent terms for using our platform."
                 />
 
-                <InfoGrid cols={3}>
+                <InfoGrid cols={2}>
                     <InfoCard
                         title="Free to Use"
-                        description="Unlimited access to all conversion tools at no cost."
+                        description="Access all our text conversion tools completely free of charge. No registration or hidden fees required."
                         icon={CheckCircle2}
-                        centered
                     />
                     <InfoCard
-                        title="As-Is Basis"
-                        description="Provided without warranties of any kind."
+                        title="As-Is Service"
+                        description="We provide this tool on an as-is basis. While we strive for perfection, we are not liable for any inaccuracies."
                         icon={Scale}
-                        centered
-                    />
-                    <InfoCard
-                        title="Fair Use"
-                        description="Please do not use our tools for automated scrapers."
-                        icon={AlertCircle}
-                        centered
                     />
                 </InfoGrid>
 
-                <ContentCard gradientBar className="text-sm md:text-base">
-                    <PageSection title="1. Acceptance of Terms">
+                <ContentCard>
+                    <PageSection title="Detailed Information" icon={FileText}>
                         <p>
-                            By accessing and using Convert Case, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                            By accessing and using Convert Case, you agree to be bound by these Terms of Service. This ensures a safe and productive environment for all our users.
                         </p>
                     </PageSection>
 
-                    <PageSection title="2. Use License">
+                    <PageSection title="1. Fair Use Policy">
                         <p>
-                            Permission is granted to temporarily use the materials (information or software) on Convert Case&apos;s website for personal, non-commercial transitory viewing and use only.
-                        </p>
-                        <ul className="list-disc pl-6 space-y-2">
-                            <li>You may not use our service for any illegal purposes.</li>
-                            <li>You may not attempt to decompile or reverse engineer any software contained on the website.</li>
-                            <li>Commercial use of our conversion engine without prior consent is prohibited.</li>
-                        </ul>
-                    </PageSection>
-
-                    <PageSection title="3. Limitation of Liability">
-                        <p>
-                            In no event shall Convert Case or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Convert Case.
+                            Permission is granted for personal and commercial use of our conversion engine. However, you may not use our service for any illegal purposes or attempt to disrupt the platform through automated scraping.
                         </p>
                     </PageSection>
 
-                    <PageSection title="4. Accuracy of Materials">
+                    <PageSection title="2. Limitation of Liability">
                         <p>
-                            The materials appearing on Convert Case&apos;s website could include technical, typographical, or photographic errors. Convert Case does not warrant that any of the materials on its website are accurate, complete, or current.
+                            In no event shall Convert Case be liable for any damages arising out of the use or inability to use the materials on our platform, including loss of data or profit.
+                        </p>
+                    </PageSection>
+
+                    <PageSection title="3. Content Accuracy">
+                        <p>
+                            While we aim for maximum accuracy, we do not warrant that all converted materials are completely error-free. It is recommended to review critical conversions manually.
                         </p>
                     </PageSection>
                 </ContentCard>
