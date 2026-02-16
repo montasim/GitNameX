@@ -1,17 +1,19 @@
 "use client";
 
+import React, { useState } from "react";
 import { PageLayout, PageHeader, ContentCard } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Send, Globe } from "lucide-react";
-import { useState } from "react";
 import { sendEmail } from "@/lib/actions";
 
 export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -46,7 +48,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-lg">Email Us</h3>
-                                        <p className="text-muted-foreground">hello@convertcase.net</p>
+                                        <p className="text-muted-foreground">{contactEmail}</p>
                                     </div>
                                 </div>
 
@@ -119,7 +121,7 @@ export default function ContactPage() {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <Label htmlFor="name">Full Name</Label>
-                                            <Input id="name" name="name" placeholder="John Doe" required className="rounded-xl bg-background/50" />
+                                            <Input id="name" name="name" placeholder="Enter your name" required className="rounded-xl bg-background/50" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="email">Email Address</Label>

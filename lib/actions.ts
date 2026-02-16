@@ -13,8 +13,8 @@ export async function sendEmail(formData: FormData) {
         return { error: "All fields are required" };
     }
 
-    const contactEmail = process.env.CONTACT_EMAIL || "hello@convertcase.net";
-    const emailFrom = process.env.EMAIL_FROM || "onboarding@resend.dev";
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+    const emailFrom = process.env.NEXT_PUBLIC_EMAIL_FROM;
 
     try {
         // Send email to admin

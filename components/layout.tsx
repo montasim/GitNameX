@@ -37,7 +37,7 @@ export function Header() {
                 <div className="flex items-center gap-2">
                     <ModeToggle />
                     <a
-                        href="https://github.com/montasim/convert-case"
+                        href="https://github.com/montasim/caseify-case-converter"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 hover:bg-muted rounded-full transition-colors flex items-center justify-center w-10 h-10"

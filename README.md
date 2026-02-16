@@ -45,7 +45,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/montasim/convert-case.git
+   git clone https://github.com/montasim/caseify-case-converter.git
    cd convert-case
    ```
 
@@ -57,9 +57,9 @@
 3. **Environment Setup**:
    Create a `.env.local` file in the root directory and add your Resend API key and email configurations:
    ```env
-   RESEND_API_KEY=re_your_api_key
-   CONTACT_EMAIL=hello@convertcase.net
-   EMAIL_FROM=onboarding@resend.dev
+   NEXT_PUBLIC_RESEND_API_KEY=re_your_api_key
+   NEXT_PUBLIC_CONTACT_EMAIL=montasimmamun@gmail.com
+   NEXT_PUBLIC_EMAIL_FROM=onboarding@resend.dev
    ```
 
 4. **Run the development server**:
