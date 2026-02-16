@@ -57,7 +57,9 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center">
                         <Logo iconSize="w-6 h-6" textSize="text-sm" className="opacity-80" />
-                        <span className="ml-2 text-sm text-muted-foreground font-medium">© 2026</span>
+                        <span className="ml-2 text-sm text-muted-foreground font-medium">
+                            &copy; {new Date().getFullYear()}{' '} All rights reserved.
+                        </span>
                     </div>
 
                     <nav className="flex items-center gap-8 text-sm text-muted-foreground">
@@ -155,7 +157,7 @@ export function InfoCard({
                         <Icon className="w-6 h-6 text-primary" />
                     </div>
                 )}
-                <h3 className="text-xl font-bold">{title}</h3>
+                <h3 className="text-xl font-semibold">{title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {description}
                 </p>
@@ -179,7 +181,7 @@ export function PageSection({
         <section className={cn("space-y-4", className)}>
             <div className="flex items-center gap-3">
                 {Icon && <Icon className="w-5 h-5 text-primary" />}
-                <h2 className="text-xl font-bold text-foreground">{title}</h2>
+                <h2 className="text-xl font-semibold text-foreground">{title}</h2>
             </div>
             <div className="text-muted-foreground leading-relaxed space-y-4">
                 {children}

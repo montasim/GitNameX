@@ -48,7 +48,7 @@ export default function ContactPage() {
                                         <Mail className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg">Email Us</h3>
+                                        <h3 className="font-semibold text-lg">Email Us</h3>
                                         <p className="text-muted-foreground">{contactEmail}</p>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                                         <MessageSquare className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg">Live Support</h3>
+                                        <h3 className="font-semibold text-lg">Live Support</h3>
                                         <p className="text-muted-foreground">Available Mon-Fri, 9am - 5pm EST</p>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                                         <Globe className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg">Global Reach</h3>
+                                        <h3 className="font-semibold text-lg">Global Reach</h3>
                                         <p className="text-muted-foreground">Trusted by users worldwide</p>
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
 
                                     <Button
                                         type="submit"
-                                        className="w-full h-14 text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                                        className="w-full h-12 text-lg font-bold rounded-xl shadow-lg shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? (
